@@ -1,0 +1,36 @@
+適用phython R matlib
+
+e=randn(1000,1);
+y1=e;
+
+y2_ar1=zeros(1000,1);
+for ii=2:1:1000
+y2_ar1(ii,1)=5+0.8*y2_ar1(ii-1,1)+e(ii,1);
+end
+
+y3_ar1=zeros(1000,1);
+for ii=2:1:1000
+y3_ar1(ii,1)=y3_ar1(ii-1,1)+e(ii,1);
+end
+
+y4_ar2=zeros(1000,1);
+for ii=3:1:1000
+y4_ar2(ii,1)=5+0.6*y4_ar2(ii-1,1)-0.5*y4_ar2(ii-2,1)+e(ii,1);
+
+y4=5+0.6Yt-1-0.4Yt-2+e
+Q2=0.4=PACF
+
+end
+
+y5_ma1=zeros(1000,1);
+for ii=2:1:1000
+y5_ma1(ii,1)=5+e(ii,1)+0.8*e(ii-1,1);
+end
+
+y6_ma2=zeros(1000,1);
+for ii=3:1:1000
+y6_ma2(ii,1)=5+e(ii,1)+0.6*e(ii-1,1)-0.5*e(ii-2,1);
+end
+
+y1000=[y1 y2_ar1 y3_ar1 y4_ar2 y5_ma1 y6_ma2];
+y500 = y1000(501:end,:);
